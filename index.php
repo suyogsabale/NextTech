@@ -120,7 +120,7 @@
                     {
                         
                         // echo'<div class="col-sm-6 col-md-4 portfolio-item"><a class="portfolio-link" href="'.$row['modal'].'" data-bs-toggle="modal">';
-                        echo'<div class="card" style="width: 18rem;border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;box-shadow: 5px 5px 16px 2px rgba(0,0,0,0.25);margin: 14px;min-width: 280px;max-width: 300px;margin-bottom: 20px;">';
+                        echo'<div data-aos="fade-up" data-aos-duration="900" class="card aos-init aos-animate" style="width: 18rem;border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;box-shadow: 5px 5px 16px 2px rgba(0,0,0,0.25);margin: 14px;min-width: 280px;max-width: 300px;margin-bottom: 20px;">';
                         echo'<div>';
                         echo'<img width="239" height="192" src="assets/img/products/'.$row['img'].'" style="padding: 8px;margin: 7px;transform-origin: center;width: 239px;height: 192px;" />';
                         echo'<div class="card-body d-flex flex-column" style="height: 262px;">';
@@ -344,111 +344,47 @@
             </div>
         </div>
     </footer>
-    <div class="modal fade text-center portfolio-modal" role="dialog" tabindex="-1" id="portfolioModal1">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <h2 class="text-uppercase" style="font-size: 50px;"><span style="color: var(--ast-global-color-2); background-color: rgba(247, 248, 248, 0);">CYNIC 370</span></h2>
-                                <p class="text-muted item-intro" style="font-size: 23px;"><a href="http://nexttechmachines.com/product-category/turning-machine/"><span style="color: rgb(0, 0, 0); background-color: rgb(247, 248, 248);">TURNING MACHINE</span></a></p><img class="img-fluid d-block mx-auto" src="assets/img/products/CYNIC.png">
-                                <p style="font-size: 18px;text-align: justify;padding-right: 0px;transform: scale(1);backdrop-filter: blur(0px);-webkit-backdrop-filter: blur(0px);margin: -9px;"><strong><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">Key Features</span></strong><br><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">·&nbsp; &nbsp; Dual Torque Tube Design with 45° True Slant Bed&nbsp;Construction</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">·&nbsp; 32X10 Size Ball Screw with C3 Grade, Double Nut, Long Nut,and Deep Groove with Zero Backlash</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· High Precision Grade 30 Size Ball Type LM Guidays with&nbsp;Medium Preloaded Flange Type Blocks</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">·&nbsp; Digital Servo Spindle Motor</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">·&nbsp; &nbsp;Cartridge Type High-Speed Rigid Spindle with P4 Class&nbsp;Angular Contact Ball Bearings (3+2)</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">·&nbsp; Hydraulic Power Chuck 165×3 Jaw with Hard Jaw and Soft Jaw</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">·&nbsp; Linear type Tooling system</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">·&nbsp; &nbsp; All Telescopic Covers in Stainless Steel Grade (Corrosion&nbsp;Free)</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">·&nbsp; Machine Guard With RAL 7037 &amp; RAL 7021 Powder Coated</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">·&nbsp; &nbsp; Electric Panel with Air Conditioner</span><br><br></p>
-                                <ul class="list-unstyled"></ul><a class="btn btn-primary" role="button" href="http://nexttechmachines.com/wp-content/uploads/2023/02/CYNIC.pdf" style="margin: 0px;margin-right: 14px;background: rgb(54,74,254);"><i class="fa fa-download"></i><span>&nbsp;Download Catalog</span></a><button class="btn btn-primary" type="button" data-bs-dismiss="modal" style="background: #38c83e;color: rgb(255,255,255);border: 3px none rgb(0,0,0);"><i class="icon ion-ios-paper-outline"></i><span>&nbsp;Get Quotation</span></button><button class="btn btn-primary" type="button" data-bs-dismiss="modal" style="margin-left: 18px;color: rgb(232,232,232);background: rgb(227,39,39);"><i class="fa fa-times"></i><span>&nbsp;Close Project</span></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade text-center portfolio-modal" role="dialog" tabindex="-1" id="portfolioModal2">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <h2 class="text-uppercase"><span style="font-weight: normal !important; color: var(--ast-global-color-2); background-color: rgba(247, 248, 248, 0);">TMC SERIES</span></h2>
-                                <p class="text-muted item-intro">TMC Machine</p><img class="img-fluid d-block mx-auto" src="assets/img/products/tmc.png">
-                                <p class="text-start"><br><strong><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">Key Features</span></strong><br><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· Dual Torque Tube Design with 45° True Slant Bed&nbsp;Construction</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· 32X10 Size Ball Screw with C3 Grade, Double Nut, Long Nut,and Deep Groove with Zero Backlash</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· High Precision Grade 35 Size Ball Type LM Guidays with&nbsp;Medium Preloaded Flange Type Blocks</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· Digital Servo Spindle Motor</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· Cartridge Type High-Speed Rigid Spindle with P4 Class&nbsp;Angular Contact Ball Bearings (3+2)</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· Hydraulic Power Chuck 200×3 Jaw with Hard Jaw and Soft Jaw</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">·Live Tool Turrent VDI 30</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">·All Telescopic Covers in Stainless Steel Grade (Corrosion&nbsp;Free)</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· Machine Guard With RAL 7037 &amp; RAL 7021 Powder Coated</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· Electric Panel with Air Conditioner</span><br><br><br></p>
-                                <ul class="list-unstyled"></ul><a class="btn btn-primary" role="button" href="http://nexttechmachines.com/wp-content/uploads/2023/02/CYNIC.pdf" style="margin: 0px;margin-right: 14px;background: rgb(54,74,254);"><i class="fa fa-download"></i><span>&nbsp;Download Catalog</span></a><button class="btn btn-primary" type="button" data-bs-dismiss="modal" style="background: #38c83e;color: rgb(255,255,255);border: 3px none rgb(0,0,0);"><i class="icon ion-ios-paper-outline"></i><span>&nbsp;Get Quotation</span></button><button class="btn btn-primary" type="button" data-bs-dismiss="modal" style="margin-left: 18px;color: rgb(232,232,232);background: rgb(227,39,39);"><i class="fa fa-times"></i><span>&nbsp;Close Project</span></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade text-center portfolio-modal" role="dialog" tabindex="-1" id="portfolioModal3">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <h2 class="text-uppercase">hmc series</h2>
-                                <p class="text-muted item-intro">HMC Machines</p><img class="img-fluid d-block mx-auto" src="assets/img/products/hmc.png">
-                                <p class="text-start"><br><strong><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">Key Features</span></strong><br><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· Bed Construction Extra Wide and Torque Tube Design.</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· Lowe Centre Of Gravity</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· High Precision Grade Roller LM Guide ways with medium preloaded extra long blocks</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· Digital Servo Spindle Motor</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· Taiwan Make High Speed Rigid Spindle with P4 Class Angular Contact Ball Bearings</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· Smart Tool Management System(STM)</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">·ATC with lowest tool time to Bath Table</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">·Advance tool call system(ATS)</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· Auto Lubricant Unit and Coolarnt Unit</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· Flush Coolant</span><br><br><br></p><a class="btn btn-primary" role="button" href="http://nexttechmachines.com/wp-content/uploads/2023/02/CYNIC.pdf" style="margin: 0px;margin-right: 14px;background: rgb(54,74,254);"><i class="fa fa-download"></i><span>&nbsp;Download Catalog</span></a><button class="btn btn-primary" type="button" data-bs-dismiss="modal" style="background: #38c83e;color: rgb(255,255,255);border: 3px none rgb(0,0,0);"><i class="icon ion-ios-paper-outline"></i><span>&nbsp;Get Quotation</span></button><button class="btn btn-primary" type="button" data-bs-dismiss="modal" style="margin-left: 18px;color: rgb(232,232,232);background: rgb(227,39,39);"><i class="fa fa-times"></i><span>&nbsp;Close Project</span></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade text-center portfolio-modal" role="dialog" tabindex="-1" id="portfolioModal4">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <h2 class="text-uppercase">CLOBBER series</h2>
-                                <p class="text-muted item-intro">VMC Machine</p><img class="img-fluid d-block mx-auto" src="assets/img/products/CLOBBER.png">
-                                <p class="text-start"><br><strong><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">Key Features</span></strong><br><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· Dual Torque Tube Design&nbsp; Construction</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· 32X10 Size Ball Screw with C3 Grade, Double Nut, Long Nut,and Deep Groove with Zero Backlash</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· High Precision Grade 35 Size Ball Type LM Guidays with&nbsp;Medium Preloaded Flange Type Blocks</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· Digital Servo Spindle Motor</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· Cartridge Type High-Speed Rigid Spindle with P4 Class&nbsp;Angular Contact Ball Bearings (3+2)</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· 20 Tools ATC with lowest tool to tool time</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">·Machine Gaurd with RAL 7037 &amp; RAL 7021 Powder Coated</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">·All Telescopic Covers in Stainless Steel Grade (Corrosion&nbsp;Free)</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· Machine Guard With RAL 7037 &amp; RAL 7021 Powder Coated</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· Electric Panel with Air Conditioner</span><br><br><br></p><a class="btn btn-primary" role="button" href="http://nexttechmachines.com/wp-content/uploads/2023/02/CYNIC.pdf" style="margin: 0px;margin-right: 14px;background: rgb(54,74,254);"><i class="fa fa-download"></i><span>&nbsp;Download Catalog</span></a><button class="btn btn-primary" type="button" data-bs-dismiss="modal" style="background: #38c83e;color: rgb(255,255,255);border: 3px none rgb(0,0,0);"><i class="icon ion-ios-paper-outline"></i><span>&nbsp;Get Quotation</span></button><button class="btn btn-primary" type="button" data-bs-dismiss="modal" style="margin-left: 18px;color: rgb(232,232,232);background: rgb(227,39,39);"><i class="fa fa-times"></i><span>&nbsp;Close Project</span></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade text-center portfolio-modal" role="dialog" tabindex="-1" id="portfolioModal5">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <h2 class="text-uppercase">vlt serires</h2>
-                                <p class="text-muted item-intro">VLT Machines</p><img class="img-fluid d-block mx-auto" src="assets/img/products/vtl.png">
-                                <p class="text-start"><br><strong><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">Key Features</span></strong><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· Dual Casting Wall Construction in column design</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· High Precision Class roller LM guide ways with Medium</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· Ball Screw with C3 class, Double Nut, Long Nut and deep Groove with zerobacklash</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· Digital Servo Spindle Motor</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· Cartridge Type High-Speed Rigid Spindle with P4 Class&nbsp;Angular Contact Ball Bearings&nbsp;</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· Hydraulic BI-Directional Turrent</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">·Hydraulic Power Chunk with Hard Jaw with Soft Jaw</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">·All Telescopic Covers in Stainless Steel Grade (Corrosion&nbsp;Free)</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· Machine Guard With RAL 7037 &amp; RAL 7021 Powder Coated</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· Electric Panel with Air Conditioner</span><br><br><br></p><a class="btn btn-primary" role="button" href="http://nexttechmachines.com/wp-content/uploads/2023/02/CYNIC.pdf" style="margin: 0px;margin-right: 14px;background: rgb(54,74,254);"><i class="fa fa-download"></i><span>&nbsp;Download Catalog</span></a><button class="btn btn-primary" type="button" data-bs-dismiss="modal" style="background: #38c83e;color: rgb(255,255,255);border: 3px none rgb(0,0,0);"><i class="icon ion-ios-paper-outline"></i><span>&nbsp;Get Quotation</span></button><button class="btn btn-primary" type="button" data-bs-dismiss="modal" style="margin-left: 18px;color: rgb(232,232,232);background: rgb(227,39,39);"><i class="fa fa-times"></i><span>&nbsp;Close Project</span></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade text-center portfolio-modal" role="dialog" tabindex="-1" id="portfolioModal6">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 mx-auto">
-                            <div class="modal-body">
-                                <h2 class="text-uppercase">DCMC SERIES&nbsp;</h2>
-                                <p class="text-muted item-intro">DCMC Machines</p><img class="img-fluid d-block mx-auto" src="assets/img/products/DCMC.png">
-                                <ul class="list-unstyled"></ul>
-                            </div>
-                            <p class="text-start"><br><strong><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">Key Features</span></strong><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· Dual Casting Wall Construction in column design</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· High Precision Class roller LM guide ways with Medium</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· Ball Screw with C3 class, Double Nut, Long Nut and deep Groove with zerobacklash</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· Digital Servo Spindle Motor</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· Cartridge Type High-Speed Rigid Spindle with P4 Class&nbsp;Angular Contact Ball Bearings&nbsp;</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· Hydraulic BI-Directional Turrent</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">·Hydraulic Power Chunk with Hard Jaw with Soft Jaw</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">·All Telescopic Covers in Stainless Steel Grade (Corrosion&nbsp;Free)</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· Machine Guard With RAL 7037 &amp; RAL 7021 Powder Coated</span><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">· Electric Panel with Air Conditioner</span><br><br><br></p><a class="btn btn-primary" role="button" href="http://nexttechmachines.com/wp-content/uploads/2023/02/CYNIC.pdf" style="margin: 0px;margin-right: 14px;background: rgb(54,74,254);"><i class="fa fa-download"></i><span>&nbsp;Download Catalog</span></a><button class="btn btn-primary" type="button" data-bs-dismiss="modal" style="background: #38c83e;color: rgb(255,255,255);border: 3px none rgb(0,0,0);"><i class="icon ion-ios-paper-outline"></i><span>&nbsp;Get Quotation</span></button><button class="btn btn-primary" type="button" data-bs-dismiss="modal" style="margin-left: 18px;color: rgb(232,232,232);background: rgb(227,39,39);"><i class="fa fa-times"></i><span>&nbsp;Close Project</span></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
+
+    <!-- ----------------------- modals---------------------------- -->
+
+    <?php
+
+                    include("connection.php");
+                    $query = "SELECT * FROM prod_tab";
+                    $result = mysqli_query($con,$query);
+
+                    while($row = mysqli_fetch_assoc($result))
+                    {
+                        echo'<div class="modal fade text-center portfolio-modal" role="dialog" tabindex="-1" id="'.$row['modid'].'">';
+                        echo'<div class="modal-dialog modal-lg" role="document">';
+                        echo'<div class="modal-content">';
+                        echo'<div class="container">';
+                        echo'<div class="row">';
+                        echo'<div class="col-lg-8 mx-auto">';
+                        echo'<div class="modal-body">';
+                        echo'<h2 class="text-uppercase" style="font-size: 50px;"><span style="color: var(--ast-global-color-2); background-color: rgba(247, 248, 248, 0);">'.$row['name'].'</span></h2>';
+                        echo'<p class="text-muted item-intro" style="font-size: 23px;"><a href="http://nexttechmachines.com/product-category/turning-machine/"><span style="color: rgb(0, 0, 0); background-color: rgb(247, 248, 248);">'.$row['class'].'</span></a></p><img class="img-fluid d-block mx-auto" src="assets/img/products/'.$row['img'].'">';
+                        echo'<p style="font-size: 18px;text-align: justify;padding-right: 0px;transform: scale(1);backdrop-filter: blur(0px);-webkit-backdrop-filter: blur(0px);margin: -9px;"><strong><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">Key Features</span></strong><br><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">'.$row['feat'].'</span></p>';
+                        echo'<ul class="list-unstyled"></ul><a class="btn btn-primary" role="button" href="'.$row['pdf'].'" style="margin: 0px;margin-right: 14px;background: rgb(54,74,254);"><i class="fa fa-download"></i><span>&nbsp;Download Catalog</span></a><button class="btn btn-primary" type="button" data-bs-dismiss="modal" style="background: #38c83e;color: rgb(255,255,255);border: 3px none rgb(0,0,0);"><i class="icon ion-ios-paper-outline"></i><span>&nbsp;Get Quotation</span></button><button class="btn btn-primary" type="button" data-bs-dismiss="modal" style="margin-left: 18px;color: rgb(232,232,232);background: rgb(227,39,39);"><i class="fa fa-times"></i><span>&nbsp;Close Project</span></button>';
+                        echo'</div>';
+                        echo'</div>';
+                        echo'</div>';
+                        echo'</div>';
+                        echo'</div>';
+                        echo'</div>';
+                        echo'</div>';
+                    }
+
+
+
+
+
+                ?>
+
+
+
+
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/aos.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
