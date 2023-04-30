@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+
     <link rel="stylesheet" href="assets/css/-Login-form-Page-BS4--Login-form-Page-BS4.css">
     <link rel="stylesheet" href="assets/css/Animated-Text-Background.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.2/css/theme.bootstrap_4.min.css">
@@ -48,7 +49,7 @@
                 <div class="col-12 col-sm-6 col-md-6">
                     <h3 class="text-dark mb-4">Manage Your Products</h3>
                 </div>
-                <div class="col-12 col-sm-6 col-md-6 text-end" style="margin-bottom: 30px;"><a class="btn btn-primary" role="button"><i class="fa fa-plus"></i>&nbsp;ADD PRODUCT</a></div>
+                <div class="col-12 col-sm-6 col-md-6 text-end" style="margin-bottom: 30px;"><a class="btn btn-primary" href="insert.html" role="button"><i class="fa fa-plus"></i>&nbsp;ADD PRODUCT</a></div>
             </div>
             <div class="card" id="TableSorterCard">
                 <div class="card-header py-3">
@@ -66,15 +67,15 @@
                                 <thead class="thead-dark">
                                     <tr>
                                         <th class="text-center">ID</th>
-                                        <th class="text-center">PRODUCT Image</th>
+                                        <th class="text-center">PRODUCT Img</th>
                                         <th class="text-center">NAME</th>
                                         <th class="text-center">PRODUCT DESCRIPTION</th>
                                         <th class="text-center">CATEGORY</th>
                                         <th class="text-center">FEATURES</th>
                                         <th class="text-center">BROCHURE</th>
                                         <th class="text-center">MODAL</th>
-                                        <th class="text-center">MOdal_ID</th>
-                                        <th class="text-center filter-false sorter-false">Acciones</th>
+                                        <th class="text-center">MODAL_ID</th>
+                                        <th class="text-center filter-false sorter-false">ACTIONS</th>
                                     </tr>
                                 </thead>
                                 <tbody class="text-center">
@@ -99,38 +100,33 @@
                                         echo"<td>".$row["pdf"]."</td>";
                                         echo"<td>".$row["modal"]."</td>";
                                         echo"<td>".$row["modid"]."</td>";
-                                        echo"<td class='text-center align-middle' style='max-height: 60px;height: 60px;'><a class='btn btnMaterial btn-flat success semicircle' role='button' href='#'><i class='fas fa-pen'></i></a><a class='btn btnMaterial btn-flat accent btnNoBorders checkboxHover' role='button' style='margin-left: 5px;' data-bs-toggle='modal' data-bs-target='#delete-modal' href='#'><i class='fas fa-trash btnNoBorders' style='color: #DC3545;'></i></a></td>";
+                                        echo"<td class='text-center align-middle' style='max-height: 60px;height: 60px;'><a class='btn btnMaterial btn-flat success semicircle' role='button' href='#'><i class='fas fa-pen'></i></a><a class='btn btnMaterial btn-flat accent btnNoBorders checkboxHover' role='button' style='margin-left: 5px;' data-bs-toggle='modal' data-bs-target='#delete-modal' href='#'><i class='fas fa-trash btnNoBorders' style='color: #DC3545;'></i></a><a href = 'delete.php?i=$row[id] 'class='btn btn-danger' data-toggle='modal' data-target='#deleteModal' onclick='modalLauch(".$row['id'].")'>Delete</a></td>";
                                         echo"<tr>";
                                     }
                                 ?>
 
                                     
-                                    
-                                    
-                                    <!-- <tr>
-                                        <td>Cell 1</td>
-                                        <td>Ana</td>
-                                        <td><img width="100" height="80"></td>
-                                        <td>Diseño</td>
-                                        <td>Cell 4</td>
-                                        <td>Cell 5</td>
-                                        <td>Cell 6</td>
-                                        <td>Cell 7</td>
-                                        <td>Cell 8</td>
-                                        <td class="text-center align-middle" style="max-height: 60px;height: 60px;"><a class="btn btnMaterial btn-flat primary semicircle" role="button" href="#"><i class="far fa-eye"></i></a><a class="btn btnMaterial btn-flat success semicircle" role="button" href="#"><i class="fas fa-pen"></i></a><a class="btn btnMaterial btn-flat accent btnNoBorders checkboxHover" role="button" style="margin-left: 5px;" data-bs-toggle="modal" data-bs-target="#delete-modal" href="#"><i class="fas fa-trash btnNoBorders" style="color: #DC3545;"></i></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Cell 1</td>
-                                        <td>Fer<br></td>
-                                        <td>Desarrollador</td>
-                                        <td>Development</td>
-                                        <td>Cell 4</td>
-                                        <td>Cell 5</td>
-                                        <td>Cell 6</td>
-                                        <td>Cell 7</td>
-                                        <td>Cell 8</td>
-                                        <td class="text-center align-middle" style="max-height: 60px;height: 60px;"><a class="btn btnMaterial btn-flat primary semicircle" role="button" href="#"><i class="far fa-eye"></i></a><a class="btn btnMaterial btn-flat success semicircle" role="button" href="#"><i class="fas fa-pen"></i></a><a class="btn btnMaterial btn-flat accent btnNoBorders checkboxHover" role="button" style="margin-left: 5px;" data-bs-toggle="modal" data-bs-target="#delete-modal" href="#"><i class="fas fa-trash btnNoBorders" style="color: #DC3545;"></i></a></td>
-                                    </tr> -->
+                            <div class='modal fade' id='deleteModal' tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true'>
+                                <div class='modal-dialog modal-dialog-centered' role='document'>
+                                   <div class='modal-content'>
+                                       <div class='modal-header'>
+                                           <h5 class='modal-title' id='exampleModalLongTitle'>Delete</h5>
+                                           <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+                                               <span aria-hidden='true'>&times;</span>
+                                           </button>
+                                       </div>
+                                        <div class='modal-body'>
+                                            Are you sure you want to delete this complain?
+                                            <input id="toDeleteId" type="hidden" value="">
+                                        </div>
+                                        <div class='modal-footer'>
+                                            <button type='button' class='btn btn-light' data-dismiss='modal'>Close</button>
+                                            <button type='button' class='btn btn-danger' onclick="confirmDelete()">Delete</button>
+                                        </div>
+                                  </div>
+                              </div>
+                            </div>
+
                                 </tbody>
                             </table>
                         </div>
@@ -170,6 +166,16 @@
     <script src="assets/js/Ludens---1-Index-Table-with-Search--Sort-Filters-v20-Ludens---1-Index-Table-with-Search--Sort-Filters.js"></script>
     <script src="assets/js/Ludens---1-Index-Table-with-Search--Sort-Filters-v20-Ludens---Material-UI-Actions.js"></script>
     <script src="assets/js/Table-With-Search-search-table.js"></script>
+    <script>
+                                    var delId;
+                                    function modalLauch(id){
+                                        delId=id;
+                                        $('#toDeleteId').val(id);
+                                    }
+                                    function confirmDelete(){
+                                        window.location.replace("http://localhost/NextTech/delete.php?i="+delId);
+                                    }
+    </script>
 </body>
 
 </html>
