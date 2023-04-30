@@ -93,7 +93,7 @@ if(isset($_POST['signup'])){
                 if($status == 'verified'){
                   $_SESSION['email'] = $email;
                   $_SESSION['password'] = $password;
-                    header('location: index2.html');
+                    header('location: manage_pro.php');
                     exit();
                 }else{
                     $info = "It's look like you haven't still verify your email - $email";
