@@ -100,7 +100,7 @@
                                         echo"<td>".$row["pdf"]."</td>";
                                         echo"<td>".$row["modal"]."</td>";
                                         echo"<td>".$row["modid"]."</td>";
-                                        echo"<td class='text-center align-middle' style='max-height: 60px;height: 60px;'><a class='btn btnMaterial btn-flat success semicircle' role='button' href='#'><i class='fas fa-pen'></i></a><a class='btn btnMaterial btn-flat accent btnNoBorders checkboxHover' role='button' style='margin-left: 5px;' data-bs-toggle='modal' data-bs-target='#delete-modal' href='#'><i class='fas fa-trash btnNoBorders' style='color: #DC3545;'></i></a><a href = 'delete.php?i=$row[id] 'class='btn btn-danger' data-toggle='modal' data-target='#deleteModal' onclick='modalLauch(".$row['id'].")'>Delete</a></td>";
+                                        echo"<td class='text-center align-middle' style='max-height: 60px;height: 60px;'><a href = 'update.php?i=$row[id]&n=$row[name]&sh=$row[short]&ft=$row[feat]&cs=$row[class]&pd= $row[pdf]&md=$row[modal]&mdi=$row[modid]' class='btn btn-success'>Edit</a><a class='btn btnMaterial btn-flat accent btnNoBorders checkboxHover' role='button' style='margin-left: 5px;' data-bs-toggle='modal' data-bs-target='#delete-modal' href='#'><i class='fas fa-trash btnNoBorders' style='color: #DC3545;'></i></a><a href = 'delete.php?i=$row[id] 'class='btn btn-danger' data-toggle='modal' data-target='#deleteModal' onclick='modalLauch(".$row['id'].")'>Delete</a></td>";
                                         echo"<tr>";
                                     }
                                 ?>
