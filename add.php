@@ -11,7 +11,7 @@
         $pdf = mysqli_real_escape_string($con,$_POST['pdf']);
         
         $hash = "#";
-        $mod = "portfolioModal1";
+        $mod = "portfolioModal";
         $modalid = $mod.$id;
         $modal = $hash.$modalid;
 

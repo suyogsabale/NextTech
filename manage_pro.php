@@ -49,7 +49,7 @@
                 <div class="col-12 col-sm-6 col-md-6">
                     <h3 class="text-dark mb-4">Manage Your Products</h3>
                 </div>
-                <div class="col-12 col-sm-6 col-md-6 text-end" style="margin-bottom: 30px;"><a class="btn btn-primary" href="insert.html" role="button"><i class="fa fa-plus"></i>&nbsp;ADD PRODUCT</a></div>
+                <div class="col-12 col-sm-6 col-md-6 text-end" style="margin-bottom: 30px;"><a class="btn btn-primary" style="background-color: #fe5721 ;" href="insert.html" role="button"><i class="fa fa-plus"></i>&nbsp;ADD PRODUCT</a></div>
             </div>
             <div class="card" id="TableSorterCard">
                 <div class="card-header py-3">
@@ -97,7 +97,7 @@
                                         echo"<td>".$row["short"]."</td>";
                                         echo"<td>".$row["class"]."</td>";
                                         echo"<td>".$row["feat"]."</td>";
-                                        echo"<td>".$row["pdf"]."</td>";
+                                        echo"<td>".$row["pdf"]."</td>";         
                                         echo"<td>".$row["modal"]."</td>";
                                         echo"<td>".$row["modid"]."</td>";
                                         echo"<td class='text-center align-middle' style='max-height: 60px;height: 60px;'><a href = 'update.php?i=$row[id]&n=$row[name]&sh=$row[short]&ft=$row[feat]&cs=$row[class]&pd= $row[pdf]&md=$row[modal]&mdi=$row[modid]' class='btn btn-success'>Edit</a><a class='btn btnMaterial btn-flat accent btnNoBorders checkboxHover' role='button' style='margin-left: 5px;' data-bs-toggle='modal' data-bs-target='#delete-modal' href='#'><i class='fas fa-trash btnNoBorders' style='color: #DC3545;'></i></a><a href = 'delete.php?i=$row[id] 'class='btn btn-danger' data-toggle='modal' data-target='#deleteModal' onclick='modalLauch(".$row['id'].")'>Delete</a></td>";
