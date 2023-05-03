@@ -10,49 +10,6 @@
                     $pdf =$_GET['pd'];
                     $modal =$_GET['md'];
                     $modid =$_GET['mdi'];
-
-                    
-                    // $id = isset($_GET['i']) ? $_GET['i'] : '';
-                    // $name = isset($_GET['n']) ? $_GET['n'] : '';
-                    // $short = isset($_GET['sh']) ? $_GET['sh'] : '';
-                    // $feat = isset($_GET['ft']) ? $_GET['ft'] : '';
-                    // $class = isset($_GET['cs']) ? $_GET['cs'] : '';
-                    // $pdf = isset($_GET['pd']) ? $_GET['pd'] : '';
-                    // $modal = isset($_GET['md']) ? $_GET['md'] : '';
-                    // $modid = isset($_GET['mdi']) ? $_GET['mdi'] : '';
-                    
-                
-                
-                    // if(isset($_POST['update']))
-                    // {
-                    //     $name = mysqli_real_escape_string($con,$_POST['name']);
-                    //     // $id = mysqli_real_escape_string($con,$_POST['id']);
-                    //     $short = mysqli_real_escape_string($con,$_POST['short']);
-                    //     $feat = mysqli_real_escape_string($con,$_POST['feat']);
-                    //     $class = mysqli_real_escape_string($con,$_POST['class']);
-                    //     $pdf = mysqli_real_escape_string($con,$_POST['pdf']);
-                        
-                    //     // $hash = "#";
-                    //     // $mod = "portfolioModal";
-                    //     // $modalid = $mod.$id;
-                    //     // $modal = $hash.$modalid;
-                    //     $query = "update prod_tab set name='$name',short='$short',class='$class',feat='$feat',pdf='$pdf',modal='$modal',modid= '$modid' WHERE id='$id'" ;
-                
-                    //     $data = mysqli_query($db,$query);
-                
-                    //     if($data) {
-                
-                    //         echo " <span style='color:red'>Record Updated!</span>";   
-                            
-                    //        header("Location: http://localhost/NextTech/manage_pro.php", TRUE, 301);
-                    //        exit();
-                      
-                    //     }
-                    //     else {
-                    //         echo "Failed to Update!";
-                    //     }
-                    // }
-                
                 
                 ?>
 
@@ -112,7 +69,7 @@
                                         <form class="bootstrap-form-with-validation" method="post" action="update2.php" enctype="multipart/form-data">
                                             <h2 class="text-center" style="margin-top: 27px;margin-bottom: 28px;">Update Product</h2>
                                             <div class="form-group mb-3"><label class="form-label" for="text-input">Name Of Product :</label><input class="form-control" type="text" id="name" name="name" required value="<?php echo "$name"?>"></div>
-                                            <div class="form-group mb-3"><label class="form-label" for="text-input">Product ID :</label><input class="form-control" type="text" id="id" name="id" required value="<?php echo "$id"?>"></div>
+                                            <div class="form-group mb-3"><label class="form-label" for="text-input">Product ID :</label><input class="form-control" type="text" id="id" name="id" value="<?php echo "$id"?>" readonly></div>
                                             <div class="form-group mb-3"><label class="form-label" for="text-input">Product Category :</label><input class="form-control" type="text" id="class" name="class" required value="<?php echo "$class"?>"></div>
                                             <div class="form-group mb-3"><label class="form-label" for="text-input">Short Info :</label><input class="form-control" type="text" id="short" name="short" required value="<?php echo "$short"?>"></div>
                                             <div class="form-group mb-3"><label class="form-label" for="text-input">Brochure Link :</label><input class="form-control" type="text" id="pdf" name="pdf" required value="<?php echo "$pdf"?>"></div>

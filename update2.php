@@ -3,7 +3,7 @@
     include("connection.php");
     if(isset($_POST['update']))
     {
-        $name = mysqli_real_escape_string($con,$_POST['name']);
+        $name = mysqli_real_escape_string($con,$_POST['name']); 
         $id = mysqli_real_escape_string($con,$_POST['id']);
         $short = mysqli_real_escape_string($con,$_POST['short']);
         $feat = mysqli_real_escape_string($con,$_POST['feat']);
