@@ -1,6 +1,6 @@
                 <?php
                 
-                    include_once('connection.php');
+                    include('connection.php');
                 
                     $id=$_GET['i'];
                     $name =$_GET['n'];
@@ -10,36 +10,48 @@
                     $pdf =$_GET['pd'];
                     $modal =$_GET['md'];
                     $modid =$_GET['mdi'];
+
+                    
+                    // $id = isset($_GET['i']) ? $_GET['i'] : '';
+                    // $name = isset($_GET['n']) ? $_GET['n'] : '';
+                    // $short = isset($_GET['sh']) ? $_GET['sh'] : '';
+                    // $feat = isset($_GET['ft']) ? $_GET['ft'] : '';
+                    // $class = isset($_GET['cs']) ? $_GET['cs'] : '';
+                    // $pdf = isset($_GET['pd']) ? $_GET['pd'] : '';
+                    // $modal = isset($_GET['md']) ? $_GET['md'] : '';
+                    // $modid = isset($_GET['mdi']) ? $_GET['mdi'] : '';
+                    
                 
-                    if(isset($_POST['update']))
-                    {
-                        $name = mysqli_real_escape_string($con,$_POST['name']);
-                        $id = mysqli_real_escape_string($con,$_POST['id']);
-                        $short = mysqli_real_escape_string($con,$_POST['short']);
-                        $feat = mysqli_real_escape_string($con,$_POST['feat']);
-                        $class = mysqli_real_escape_string($con,$_POST['class']);
-                        $pdf = mysqli_real_escape_string($con,$_POST['pdf']);
+                
+                    // if(isset($_POST['update']))
+                    // {
+                    //     $name = mysqli_real_escape_string($con,$_POST['name']);
+                    //     // $id = mysqli_real_escape_string($con,$_POST['id']);
+                    //     $short = mysqli_real_escape_string($con,$_POST['short']);
+                    //     $feat = mysqli_real_escape_string($con,$_POST['feat']);
+                    //     $class = mysqli_real_escape_string($con,$_POST['class']);
+                    //     $pdf = mysqli_real_escape_string($con,$_POST['pdf']);
                         
-                        $hash = "#";
-                        $mod = "portfolioModal";
-                        $modalid = $mod.$id;
-                        $modal = $hash.$modalid;
-                        $query = "update prod_tab set name='$name',short='$short',class='$class',feat='$feat',pdf='$pdf',modal='$modal',modid= '$modid' WHERE id='$id'" ;
+                    //     // $hash = "#";
+                    //     // $mod = "portfolioModal";
+                    //     // $modalid = $mod.$id;
+                    //     // $modal = $hash.$modalid;
+                    //     $query = "update prod_tab set name='$name',short='$short',class='$class',feat='$feat',pdf='$pdf',modal='$modal',modid= '$modid' WHERE id='$id'" ;
                 
-                        $data = mysqli_query($db,$query);
+                    //     $data = mysqli_query($db,$query);
                 
-                        if($data) {
+                    //     if($data) {
                 
-                            echo " <span style='color:red'>Record Updated!</span>";   
+                    //         echo " <span style='color:red'>Record Updated!</span>";   
                             
-                           header("Location: http://localhost/NextTech/manage_pro.php", TRUE, 301);
-                           exit();
+                    //        header("Location: http://localhost/NextTech/manage_pro.php", TRUE, 301);
+                    //        exit();
                       
-                        }
-                        else {
-                            echo "Failed to Update!";
-                        }
-                    }
+                    //     }
+                    //     else {
+                    //         echo "Failed to Update!";
+                    //     }
+                    // }
                 
                 
                 ?>
@@ -77,7 +89,7 @@
         <div class="container"><img src="assets/img/Group%201%20(1).png" width="143" height="42"><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto text-uppercase">
-                    <li class="nav-item"><a class="nav-link" href="manage_pro.html">MANAGE PRODUCTS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="manage_pro.php">MANAGE PRODUCTS</a></li>
                     <li class="nav-item"><a class="nav-link" href="queries.html">QUERIES</a></li>
                     <li class="nav-item"><a class="nav-link" href="log-out.php">LOG-OUT</a></li>
                 </ul>
@@ -97,16 +109,17 @@
                                     </div>
                                     <div class="col-lg-6 col-xxl-8 offset-xxl-0">
                                        
-                                        <form class="bootstrap-form-with-validation" method="post" action="update.php" enctype="multipart/form-data">
+                                        <form class="bootstrap-form-with-validation" method="post" action="update2.php" enctype="multipart/form-data">
                                             <h2 class="text-center" style="margin-top: 27px;margin-bottom: 28px;">Update Product</h2>
                                             <div class="form-group mb-3"><label class="form-label" for="text-input">Name Of Product :</label><input class="form-control" type="text" id="name" name="name" required value="<?php echo "$name"?>"></div>
                                             <div class="form-group mb-3"><label class="form-label" for="text-input">Product ID :</label><input class="form-control" type="text" id="id" name="id" required value="<?php echo "$id"?>"></div>
                                             <div class="form-group mb-3"><label class="form-label" for="text-input">Product Category :</label><input class="form-control" type="text" id="class" name="class" required value="<?php echo "$class"?>"></div>
                                             <div class="form-group mb-3"><label class="form-label" for="text-input">Short Info :</label><input class="form-control" type="text" id="short" name="short" required value="<?php echo "$short"?>"></div>
                                             <div class="form-group mb-3"><label class="form-label" for="text-input">Brochure Link :</label><input class="form-control" type="text" id="pdf" name="pdf" required value="<?php echo "$pdf"?>"></div>
-                                            <div class="form-group mb-3"><label class="form-label" for="textarea-input">Product Features :</label><textarea class="form-control" id="feat" name="feat" required value="<?php echo "$feat"?>"></textarea></div>
+                                            <div class="form-group mb-3"><label class="form-label" for="textarea-input">Product Features :</label><input class="form-control" id="feat" name="feat" required value="<?php echo "$feat"?>"></input></div>
+                                            <!-- <div class="form-group mb-3"><label class="form-label" for="textarea-input">Product Features :</label><textarea class="form-control" id="feat" name="feat" required value=""></textarea></div> -->
                                             <!-- <div class="form-group mb-3"><label class="form-label" for="file-input">Product Image :</label><input class="form-control" type="file" id="img" name="img" required="" accept="image/*"></div> -->
-                                            <div class="form-group mb-3"><button class="btn btn-primary" type="submit" name="submit" style="margin-left: 50%;background: var(--bs-orange);">UPDATE</button></div>
+                                            <div class="form-group mb-3"><button class="btn btn-primary" type="submit" name="update" style="margin-left: 50%;background: var(--bs-orange);">UPDATE</button></div>
                                         </form>
 
                                     </div>
