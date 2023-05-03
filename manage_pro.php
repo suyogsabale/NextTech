@@ -53,12 +53,13 @@
             </div>
             <div class="card" id="TableSorterCard">
                 <div class="card-header py-3">
-                    <div class="row table-topper align-items-center">
+                    <!-- <div class="row table-topper align-items-center">
                         <div class="col-12 col-sm-5 col-md-6 text-start" style="margin: 0px;padding: 5px 15px;">
                             <p class="text-primary m-0 fw-bold"></p>
                         </div>
-                        <div class="col-12 col-sm-7 col-md-6 text-end" style="margin: 0px;padding: 5px 15px;"><button class="btn btn-warning btn-sm" id="zoom_in" type="button" zoomclick="ChangeZoomLevel(-10);" style="margin: 2px;"><i class="fa fa-search-plus"></i></button><button class="btn btn-warning btn-sm" id="zoom_out" type="button" zoomclick="ChangeZoomLevel(-10);" style="margin: 2px;"><i class="fa fa-search-minus"></i></button></div>
-                    </div>
+                        <div class="col-12 col-sm-7 col-md-6 text-end" style="margin: 0px;padding: 5px 15px;"><button class="btn btn-warning btn-sm" id="zoom_in" type="button" zoomclick="ChangeZoomLevel(-10);" style="margin: 2px;"><i class="fa fa-search-plus"></i></button><button class="btn btn-warning btn-sm" id="zoom_out" type="button" zoomclick="ChangeZoomLevel(-10);" style="margin: 2px;"><i class="fa fa-search-minus"></i></button>
+                        </div>
+                    </div> -->
                 </div>
                 <div class="row">
                     <div class="col-12">
@@ -100,7 +101,9 @@
                                         echo"<td>".$row["pdf"]."</td>";         
                                         echo"<td>".$row["modal"]."</td>";
                                         echo"<td>".$row["modid"]."</td>";
-                                        echo"<td class='text-center align-middle' style='max-height: 60px;height: 60px;'><a href = 'update.php?i=$row[id]&n=$row[name]&sh=$row[short]&ft=$row[feat]&cs=$row[class]&pd= $row[pdf]&md=$row[modal]&mdi=$row[modid]' class='btn btn-success'>Edit</a><a class='btn btnMaterial btn-flat accent btnNoBorders checkboxHover' role='button' style='margin-left: 5px;' data-bs-toggle='modal' data-bs-target='#delete-modal' href='#'><i class='fas fa-trash btnNoBorders' style='color: #DC3545;'></i></a><a href = 'delete.php?i=$row[id] 'class='btn btn-danger' data-toggle='modal' data-target='#deleteModal' onclick='modalLauch(".$row['id'].")'>Delete</a></td>";
+                                        echo"<td class='text-center align-middle' style='max-height: 60px;height: 60px;'>
+                                                <a style='margin:4px;' href = 'update.php?i=$row[id]&n=$row[name]&sh=$row[short]&ft=$row[feat]&cs=$row[class]&pd= $row[pdf]&md=$row[modal]&mdi=$row[modid]' class='btn btn-success'><svg class='bi bi-pencil-square' xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' fill='currentColor' viewBox='0 0 16 16'><path d='M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z'></path><path fill-rule='evenodd' d='M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z'></path></svg></a> 
+                                                <a style='margin:4px;' href = 'delete.php?i=$row[id] 'class='btn btn-danger' data-toggle='modal' data-target='#deleteModal' onclick='modalLauch(".$row['id'].")'><svg class='bi bi-trash btnNoBorders' xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' fill='white' viewBox='0 0 16 16' style='color: #DC3545;'><path d='M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z'></path><path fill-rule='evenodd' d='M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z'></path></svg></a></td>";
                                         echo"<tr>";
                                     }
                                 ?>

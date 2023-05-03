@@ -75,7 +75,7 @@
                                             <div class="form-group mb-3"><label class="form-label" for="text-input">Brochure Link :</label><input class="form-control" type="text" id="pdf" name="pdf" required value="<?php echo "$pdf"?>"></div>
                                             <div class="form-group mb-3"><label class="form-label" for="textarea-input">Product Features :</label><input class="form-control" id="feat" name="feat" required value="<?php echo "$feat"?>"></input></div>
                                             <!-- <div class="form-group mb-3"><label class="form-label" for="textarea-input">Product Features :</label><textarea class="form-control" id="feat" name="feat" required value=""></textarea></div> -->
-                                            <!-- <div class="form-group mb-3"><label class="form-label" for="file-input">Product Image :</label><input class="form-control" type="file" id="img" name="img" required="" accept="image/*"></div> -->
+                                            <!-- <div class="form-group mb-3"><label class="form-label" for="file-input">Product Image :</label><input class="form-control" type="file" id="img" name="img"  accept="image/*"></div> -->
                                             <div class="form-group mb-3"><button class="btn btn-primary" type="submit" name="update" style="margin-left: 50%;background: var(--bs-orange);">UPDATE</button></div>
                                         </form>
 

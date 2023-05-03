@@ -38,3 +38,7 @@ input, input:focus, input:active {
   box-shadow: none !important;
 }
 
+.btn {
+  
+    margin: 4px;
+}
