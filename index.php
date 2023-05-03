@@ -304,12 +304,12 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form id="contactForm" name="contactForm">
+                    <form id="contactForm" name="contactForm" id="contactForm">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group mb-3"><input class="form-control" type="text" id="name" placeholder="Your Name *" required=""><small class="form-text text-danger flex-grow-1 lead"></small></div>
                                 <div class="form-group mb-3"><input class="form-control" type="email" id="email" placeholder="Your Email *" required=""><small class="form-text text-danger lead"></small></div>
-                                <div class="form-group mb-3"><input class="form-control" type="tel" placeholder="Your Phone *" required=""><small class="form-text text-danger lead"></small></div>
+                                <div class="form-group mb-3"><input class="form-control" type="tel" id="telp" placeholder="Your Phone *" required=""><small class="form-text text-danger lead"></small></div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group mb-3"><textarea class="form-control" id="message" placeholder="Your Message *" required=""></textarea><small class="form-text text-danger lead"></small></div>
@@ -375,15 +375,51 @@
                         echo'</div>';
                         echo'</div>';
                     }
+    ?>
 
 
+<script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
 
 
+<script>
+        // Load the EmailJS library
+        window.onload = function () {
+         emailjs.init("suyogsabale111@gmail.com");
+        };
 
-                ?>
+        // var adminmail = "php var session mail.
+        // Handle form submission
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            // document.getElementById('sendMessageButton').addEventListener('onClick', function(event) {
+        event.preventDefault();
+        // Get the user's inputs
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        const telp=document.getElementById('telp').value;
 
+        const templateParams = {
+        name: name,
+        email: email,
+        telp: telp,
+        // adminmail:adminmail,
+        message: message
+        };  
 
+      
 
+        emailjs.send('service_een9ply', 'template_o6d2w01', templateParams,'RE7U9jasHJfyteSsP')
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Your message has been sent successfully!');
+                document.getElementById('contactForm').reset();
+                }, function(error) {
+                console.log('FAILED...', error);
+                alert('Oops! Something went wrong. Please try again later.');
+                });
+        });
+
+</script>
 
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/aos.min.js"></script>
