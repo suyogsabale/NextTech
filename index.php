@@ -304,7 +304,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form id="contactForm" name="contactForm" id="contactForm">
+                    <form id="contactForm" name="contactForm" >
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group mb-3"><input class="form-control" type="text" id="name" placeholder="Your Name *" required=""><small class="form-text text-danger flex-grow-1 lead"></small></div>
@@ -356,7 +356,7 @@
 
                     while($row = mysqli_fetch_assoc($result))
                     {
-                        echo'<div class="modal fade text-center portfolio-modal" role="dialog" tabindex="-1" id="'.$row['modid'].'">';
+                        echo'<div class="modal fade text-center portfolio-modal" role="dialog" tabindex="-1" id="'.$row['modid'].'" dat="'.$row['id'].'"  datn="'.$row['name'].'">';
                         echo'<div class="modal-dialog modal-lg" role="document">';
                         echo'<div class="modal-content">';
                         echo'<div class="container">';
@@ -366,7 +366,7 @@
                         echo'<h2 class="text-uppercase" style="font-size: 50px;"><span style="color: var(--ast-global-color-2); background-color: rgba(247, 248, 248, 0);">'.$row['name'].'</span></h2>';
                         echo'<p class="text-muted item-intro" style="font-size: 23px;"><a href="http://nexttechmachines.com/product-category/turning-machine/"><span style="color: rgb(0, 0, 0); background-color: rgb(247, 248, 248);">'.$row['class'].'</span></a></p><img class="img-fluid d-block mx-auto" src="assets/img/products/'.$row['img'].'">';
                         echo'<p style="font-size: 18px;text-align: justify;padding-right: 0px;transform: scale(1);backdrop-filter: blur(0px);-webkit-backdrop-filter: blur(0px);margin: -9px;"><strong><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">Key Features</span></strong><br><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">'.$row['feat'].'</span></p>';
-                        echo'<ul class="list-unstyled"></ul><a class="btn btn-primary" role="button" href="'.$row['pdf'].'" style="margin: 0px;margin-right: 14px;background: rgb(54,74,254);"><i class="fa fa-download"></i><span>&nbsp;Download Catalog</span></a><button class="btn btn-primary" type="button" data-bs-dismiss="modal" style="background: #38c83e;color: rgb(255,255,255);border: 3px none rgb(0,0,0);"><i class="icon ion-ios-paper-outline"></i><span>&nbsp;Get Quotation</span></button><button class="btn btn-primary" type="button" data-bs-dismiss="modal" style="margin-left: 18px;color: rgb(232,232,232);background: rgb(227,39,39);"><i class="fa fa-times"></i><span>&nbsp;Close Project</span></button>';
+                        echo'<ul class="list-unstyled"></ul><a class="btn btn-primary" role="button" href="'.$row['pdf'].'" style="margin: 0px;margin-right: 14px;background: rgb(54,74,254);"><i class="fa fa-download"></i><span>&nbsp;Download Catalog</span></a><button class="btn btn-primary" type="button" id="tgbt" data-bs-toggle="modal" data-bs-target="#formModal" data-bs-dismiss="modal" style="background: #38c83e;color: rgb(255,255,255);border: 3px none rgb(0,0,0);"><i class="icon ion-ios-paper-outline"></i><span>&nbsp;Get Quotation</span></button><button class="btn btn-primary" type="button" data-bs-dismiss="modal" style="margin-left: 18px;color: rgb(232,232,232);background: rgb(227,39,39);"><i class="fa fa-times"></i><span>&nbsp;Close Project</span></button>';
                         echo'</div>';
                         echo'</div>';
                         echo'</div>';
@@ -376,6 +376,65 @@
                         echo'</div>';
                     }
     ?>
+
+                <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Please Fill the Requirement details...</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="quotForm" name="quotForm">
+                        <div class="form-group">
+                                <div class="form-group mb-3"><label for="name">Name :</label><input class="form-control" type="text" id="name" placeholder="Your Name *" required=""><small class="form-text text-danger flex-grow-1 lead"></small></div>
+                                <div class="form-group mb-3"><label for="email">Email :</label><input class="form-control" type="email" id="email" placeholder="Your Email *" required=""><small class="form-text text-danger lead"></small></div>
+                                <div class="form-group mb-3"><label for="tel">Mob no :</label><input class="form-control" type="tel" id="tel" placeholder="Your Phone *" required=""><small class="form-text text-danger lead"></small></div>
+                                <div class="form-group mb-3"><label for="prodid">Product ID :</label><input type="text" class="form-control" id="prodid" readonly></div>
+                                <div class="form-group mb-3"><label for="prodid">Product Name :</label><input type="text" class="form-control" id="prodnm" readonly></div>
+                                <div class="form-group mb-3"><label for="name">Location :</label><input class="form-control" type="text" id="loc" placeholder="Your Location (CITY) *" required=""><small class="form-text text-danger flex-grow-1 lead"></small></div>
+                                <div class="form-group mb-3"><label for="name">Quantity :</label><input class="form-control" type="text" id="qty" placeholder="Required Quantity *" required=""><small class="form-text text-danger flex-grow-1 lead"></small></div>
+                        </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary" id="quotbtn" style="background-color: #fe5721 ;" data-bs-dismiss="modal">Get Quotation</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+
+                <script>
+
+                            // $(document).ready(function() {
+                            //     $('tgbt').on('click', function() {
+                            //         var data = $('#portfolioModal4 .portfolio-caption h4').text();
+                            //         $('#exampleFormControlInput1').val(data);
+                            //     });
+                            // });
+
+
+                            // Get all the buttons inside modals with class "portfolio-modal"
+                            const modalButtons = document.querySelectorAll('.portfolio-modal button');
+
+                            // Add a click event listener to each modal button
+                            modalButtons.forEach(button => {
+                                button.addEventListener('click', function() {
+                                // Get the ID of the parent modal
+                                const pId = this.closest('.portfolio-modal').getAttribute('dat');
+                                    prodid.value=pId;
+
+                                const pn = this.closest('.portfolio-modal').getAttribute('datn');
+                                prodnm.value=pn;
+                                });
+                            });
+
+
+                </script>
 
 
 <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
@@ -408,7 +467,47 @@
 
       
 
-        emailjs.send('service_een9ply', 'template_o6d2w01', templateParams,'RE7U9jasHJfyteSsP')
+        emailjs.send('service_een9ply', 'template_o6d2w01', templateParams,'medk5Cz9L94vXLnMW')
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Your message has been sent successfully!');
+                document.getElementById('contactForm').reset();
+                }, function(error) {
+                console.log('FAILED...', error);
+                alert('Oops! Something went wrong. Please try again later.');
+                });
+        });
+
+
+
+        /// Quotation Mail --------------------------------------------------------------------------------
+        // var adminmail = "php var session mail.
+        // Handle form submission
+                                                         // document.getElementById('quotForm').addEventListener('submit', function(event) {
+            document.getElementById('quotbtn').addEventListener('onClick', function(event) {
+        event.preventDefault();
+        // Get the user's inputs
+        const name2 = document.getElementById('name').value;
+        const email2 = document.getElementById('email').value;
+        const tel2=document.getElementById('tel').value;
+        const prodid = document.getElementById('prodid').value;
+        const prodnm = document.getElementById('prodnm').value;
+        const loc = document.getElementById('loc').value;
+        const qty = document.getElementById('qty').value;
+
+        const templateParams2 = {
+        name2: name,
+        email2: email,
+        tel2: tel,
+        prodid:prodid,
+        prodnm:prodnm,
+        loc:loc,
+        qty:qty
+        };  
+
+      
+
+        emailjs.send('service_een9ply', 'template_fkhebjs', templateParams2,'medk5Cz9L94vXLnMW')
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
                 alert('Your message has been sent successfully!');
