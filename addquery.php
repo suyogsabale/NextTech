@@ -1,7 +1,6 @@
 <?php
                 
-                include('connection.php');
-            
+    include('connection.php');
     if(isset($_POST['submit']))
     {
                 // $qname=$_POST['qname'];
@@ -23,7 +22,7 @@
 
                 console.log($qname);
 
-                $sql = "insert into query_tab (Name,Email,Mobile,Product_id,Product_name,Location,Qty) values ('$qname', '$qemail', '$qtel', '$prodid','$prodnm','$loc','$qty')";
+                $sql = "insert into query_tab (name,email,telp,prodid,prodname,location,qty) values ('$qname', '$qemail', '$qtel', '$prodid','$prodnm','$loc','$qty')";
                 
                 // if ($con->query($sql) === TRUE) {
                 //     header('Location: http://localhost/NextTech/login.php');
