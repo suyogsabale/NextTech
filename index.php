@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="assets/css/Login-Form-Basic-icons.css">
     <link rel="stylesheet" href="assets/css/Ludens-basic-login.css">
     <link rel="stylesheet" href="assets/css/untitled.css">
+    <script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
 </head>
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="54">
@@ -304,7 +305,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form id="contactForm" name="contactForm" >
+                    <form id="contactForm" name="contactForm">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group mb-3"><input class="form-control" type="text" id="name" placeholder="Your Name *" required=""><small class="form-text text-danger flex-grow-1 lead"></small></div>
@@ -366,7 +367,9 @@
                         echo'<h2 class="text-uppercase" style="font-size: 50px;"><span style="color: var(--ast-global-color-2); background-color: rgba(247, 248, 248, 0);">'.$row['name'].'</span></h2>';
                         echo'<p class="text-muted item-intro" style="font-size: 23px;"><a href="http://nexttechmachines.com/product-category/turning-machine/"><span style="color: rgb(0, 0, 0); background-color: rgb(247, 248, 248);">'.$row['class'].'</span></a></p><img class="img-fluid d-block mx-auto" src="assets/img/products/'.$row['img'].'">';
                         echo'<p style="font-size: 18px;text-align: justify;padding-right: 0px;transform: scale(1);backdrop-filter: blur(0px);-webkit-backdrop-filter: blur(0px);margin: -9px;"><strong><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">Key Features</span></strong><br><br><br><span style="color: rgb(0, 0, 0); background-color: rgba(255, 255, 255, 0);">'.$row['feat'].'</span></p>';
+                        // echo'<ul class="list-unstyled"></ul><a class="btn btn-primary" role="button" href="'.$row['pdf'].'" style="margin: 0px;margin-right: 14px;background: rgb(54,74,254);"><i class="fa fa-download"></i><span>&nbsp;Download Catalog</span></a><a  href = "addq2.php?i='.$row['id'].'&n='.$row['name'].'" class="btn btn-success" role="button" style="background: #38c83e;color: rgb(255,255,255);border: 3px none rgb(0,0,0);"><i class="icon ion-ios-paper-outline"></i><span>&nbsp;Get Quotation</span></a><button class="btn btn-primary" type="button" data-bs-dismiss="modal" style="margin-left: 18px;color: rgb(232,232,232);background: rgb(227,39,39);"><i class="fa fa-times"></i><span>&nbsp;Close Project</span></button>';
                         echo'<ul class="list-unstyled"></ul><a class="btn btn-primary" role="button" href="'.$row['pdf'].'" style="margin: 0px;margin-right: 14px;background: rgb(54,74,254);"><i class="fa fa-download"></i><span>&nbsp;Download Catalog</span></a><button class="btn btn-primary" type="button" id="tgbt" data-bs-toggle="modal" data-bs-target="#formModal" data-bs-dismiss="modal" style="background: #38c83e;color: rgb(255,255,255);border: 3px none rgb(0,0,0);"><i class="icon ion-ios-paper-outline"></i><span>&nbsp;Get Quotation</span></button><button class="btn btn-primary" type="button" data-bs-dismiss="modal" style="margin-left: 18px;color: rgb(232,232,232);background: rgb(227,39,39);"><i class="fa fa-times"></i><span>&nbsp;Close Project</span></button>';
+                        // <a  href = 'addquery.php?i=$row[id]&n=$row[name]' class='btn btn-success' role="button" style="background: #38c83e;color: rgb(255,255,255);border: 3px none rgb(0,0,0);"><i class="icon ion-ios-paper-outline"></i><span>&nbsp;Get Quotation</span></a>
                         echo'</div>';
                         echo'</div>';
                         echo'</div>';
@@ -387,18 +390,19 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form id="quotForm" name="quotForm"  action="addquery.php" method="POST" enctype="multipart/form-data">
+                        <form id="quotForm" name="quotForm" >
+                        <!-- <form id="quotForm" name="quotForm"  action="addquery.php" method="POST" enctype="multipart/form-data">    -->
                         <div class="form-group">
-                                <div class="form-group mb-3"><label for="qname">Name :</label><input class="form-control" type="text" id="qname" placeholder="Your Name *" required=""><small class="form-text text-danger flex-grow-1 lead"></small></div>
-                                <div class="form-group mb-3"><label for="qemail">Email :</label><input class="form-control" type="email" id="qemail" placeholder="Your Email *" required=""><small class="form-text text-danger lead"></small></div>
-                                <div class="form-group mb-3"><label for="qtel">Mob no :</label><input class="form-control" type="tel" id="qtel" placeholder="Your Phone *" required=""><small class="form-text text-danger lead"></small></div>
-                                <div class="form-group mb-3"><label for="prodid">Product ID :</label><input type="text" class="form-control" id="prodid" readonly></div>
-                                <div class="form-group mb-3"><label for="prodnm">Product Name :</label><input type="text" class="form-control" id="prodnm" readonly></div>
-                                <div class="form-group mb-3"><label for="loc">Location :</label><input class="form-control" type="text" id="loc" placeholder="Your Location (CITY) *" required=""><small class="form-text text-danger flex-grow-1 lead"></small></div>
-                                <div class="form-group mb-3"><label for="qty">Quantity :</label><input class="form-control" type="text" id="qty" placeholder="Required Quantity *" required=""><small class="form-text text-danger flex-grow-1 lead"></small></div>
+                                <div class="form-group mb-3"><label for="qname">Name :</label><input class="form-control" type="text" id="qname" name="qname" placeholder="Your Name *" required=""><small class="form-text text-danger flex-grow-1 lead"></small></div>
+                                <div class="form-group mb-3"><label for="qemail">Email :</label><input class="form-control" type="email" id="qemail" name="qemail" placeholder="Your Email *" required=""><small class="form-text text-danger lead"></small></div>
+                                <div class="form-group mb-3"><label for="qtel">Mob no :</label><input class="form-control" type="tel" id="qtel" name="qtel" placeholder="Your Phone *" required=""><small class="form-text text-danger lead"></small></div>
+                                <div class="form-group mb-3"><label for="prodid">Product ID :</label><input type="text" class="form-control" id="prodid" name="prodid" readonly></div>
+                                <div class="form-group mb-3"><label for="prodnm">Product Name :</label><input type="text" class="form-control" id="prodnm" name="prodnm" readonly></div>
+                                <div class="form-group mb-3"><label for="loc">Location :</label><input class="form-control" type="text" id="loc" name="loc" placeholder="Your Location (CITY) *" required=""><small class="form-text text-danger flex-grow-1 lead"></small></div>
+                                <div class="form-group mb-3"><label for="qty">Quantity :</label><input class="form-control" type="text" id="qty" name="qty" placeholder="Required Quantity *" required=""><small class="form-text text-danger flex-grow-1 lead"></small></div>
 
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" name="submit"class="btn btn-primary" id="quotbtn" style="background-color: #fe5721 ;" data-bs-dismiss="modal">Get Quotation</button>
+                                <button type="button" name="submit" class="btn btn-primary" id="quotbtn" style="background-color: #fe5721 ;" >Get Quotation</button>
                         </div>
                         </form>
                     </div>
@@ -441,30 +445,69 @@
                             </script>
 
 
-<script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
 
 
-<script>
+<script type="text/javascript">
     // Load the EmailJS library
-        // window.onload = function () {
-        //  emailjs.init("suyogsabale111@gmail.com");
-        //  console.log("fun init");
+        window.onload = function () {
+         emailjs.init("suyogsabale111@gmail.com");
+         console.log("fun init");
         //  document.getElementById("quotbtn").onclick = getquot;
         //  console.log("getquot");
-        // };
+        };
+        
+
+    
+
         
 
         
-        
+document.getElementById('quotbtn').addEventListener('click', (event)=> {
+    // console.log("fifif");   
+    event.preventDefault();
+    console.log("fun2 called quot form");
+// document.getElementById('quotbtn').addEventListener('onClick', function(event) {
+    // Get the user's inputs
+    const name2 = document.getElementById('qname').value;
+    const email2 = document.getElementById('qemail').value;
+    const tel2=document.getElementById('qtel').value;
+    const prodid = document.getElementById('prodid').value;
+    const prodnm = document.getElementById('prodnm').value;
+    const loc = document.getElementById('loc').value;
+    const qty = document.getElementById('qty').value;
+    
+    const templateParams2 = {
+    name2: name2,
+    email2: email2,
+    tel2: tel2,
+    prodid:prodid,
+    prodnm:prodnm,
+    loc:loc,
+    qty:qty
+    };  
+    console.log("Data: "+ JSON.stringify(templateParams2));
+
+
+
+emailjs.send('service_een9ply', 'template_fkhebjs', templateParams2,'medk5Cz9L94vXLnMW')
+.then((response)=>{
+console.log('SUCCESS!', response.status, response.text);
+alert('Your message has been sent successfully!');
+document.getElementById('quotForm').reset();
+}, (error)=> {
+console.log('FAILED...',error);
+alert('Oops! Something went wrong. Please try again later.');
+});
+});
         
 
         // var adminmail = "php var session mail.
         // Handle form submission
         document.getElementById('contactForm').addEventListener('submit', function(event) {
             // document.getElementById('sendMessageButton').addEventListener('onClick', function(event) {
-                emailjs.init("suyogsabale111@gmail.com");
-                console.log("fifif");
-            event.preventDefault();
+                event.preventDefault();
+                console.log("fifif contacct form");
+                // emailjs.init("suyogsabale111@gmail.com");
         // Get the user's inputs
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
@@ -493,9 +536,6 @@
     });
 });
 
-</script>
-
-<!-- <script>
         
         // // Load the EmailJS library
         // window.onload = function () {
@@ -504,62 +544,13 @@
         // };
         
         
-        // window.onload = function () {
-        //   //  Initialize EmailJS library
-        //     emailjs.init("suyogsabale111@gmail.com");
-        //     console.log("fun called");
-            
-        //     // Assign getquot function to quotbtn button
-        //     document.getElementById("quotbtn").onclick = getquot;
-        // };
-        
         /// Quotation Mail --------------------------------------------------------------------------------
         // var adminmail = "php var session mail.
         // Handle form submission
 
-        function myFunction() {
-                alert("The form was submitted");
-        }
-                document.getElementById('quotForm').addEventListener('submit', getquot(event) {
-                    emailjs.init("suyogsabale111@gmail.com");
-                    console.log("fifif");   
-                    console.log("fun called");
-                // document.getElementById('quotbtn').addEventListener('onClick', function(event) {
-                    event.preventDefault();
-                    // Get the user's inputs
-                    const name2 = document.getElementById('qname').value;
-                    const email2 = document.getElementById('qemail').value;
-                    const tel2=document.getElementById('qtel').value;
-                    const prodid = document.getElementById('prodid').value;
-                    const prodnm = document.getElementById('prodnm').value;
-                    const loc = document.getElementById('loc').value;
-                    const qty = document.getElementById('qty').value;
-                    
-                    const templateParams2 = {
-                    name2: name,
-                    email2: email,
-                    tel2: tel,
-                    prodid:prodid,
-                    prodnm:prodnm,
-                    loc:loc,
-                    qty:qty
-                    };  
-        
-        
-        
-        emailjs.send('service_een9ply', 'template_fkhebjs', templateParams2,'medk5Cz9L94vXLnMW')
-            .then(getquot(response) {
-                console.log('SUCCESS!', response.status, response.text);
-                alert('Your message has been sent successfully!');
-                document.getElementById('quotForm').reset();
-                }, getquot(error) {
-                console.log('FAILED...',error);
-                alert('Oops! Something went wrong. Please try again later.');
-                });
-        });
         
 </script>
- -->
+
 
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/aos.min.js"></script>
