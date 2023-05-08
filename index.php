@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/icon.png">
+    <title>Next Tech Machines</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/Kaushan%20Script.css">
     <link rel="stylesheet" href="assets/css/Montserrat.css">
@@ -246,7 +247,7 @@
             </div>
         </div>
     </section>
-    <section class="bg-light" id="team">
+    <!-- <section class="bg-light" id="team">
         <div class="container">
             <div class="row">
                 <div class="col-sm-4">
@@ -284,14 +285,21 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <section class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 col-md-3"><a href="#"><img class="img-fluid d-block mx-auto" src="assets/img/clients/creative-market.jpg"></a></div>
-                <div class="col-sm-6 col-md-3"><a href="#"><img class="img-fluid d-block mx-auto" src="assets/img/clients/designmodo.jpg"></a></div>
-                <div class="col-sm-6 col-md-3"><a href="#"><img class="img-fluid d-block mx-auto" src="assets/img/clients/envato.jpg"></a></div>
-                <div class="col-sm-6 col-md-3"><a href="#"><img class="img-fluid d-block mx-auto" src="assets/img/clients/themeforest.jpg"></a></div>
+                <div class="col-lg-12 text-center">
+                    <h2 class="text-uppercase section-heading">Our Happy Clients</h2>
+                    <h3 class="text-muted section-subheading">"Our success is measured by the smiles of our clients."</h3>
+                </div>
+            </div>
+           
+            <div class="row">
+                <div class="col-sm-6 col-md-3"><a href="#"><img class="img-fluid d-block mx-auto" src="assets/img/clients/gayatri.jpg"></a></div>
+                <div class="col-sm-6 col-md-3"><a href="#"><img class="img-fluid d-block mx-auto" src="assets/img/clients/febtech.png"></a></div>
+                <div class="col-sm-6 col-md-3"><a href="#"><img class="img-fluid d-block mx-auto" src="assets/img/clients/akshada.png"></a></div>
+                <div class="col-sm-6 col-md-3"><a href="#"><img class="img-fluid d-block mx-auto" src="assets/img/clients/sahil.png"></a></div>
             </div>
         </div>
     </section>
@@ -300,7 +308,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="text-uppercase section-heading">Contact Us</h2>
-                    <h3 class="text-muted section-subheading">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="text-muted section-subheading">Request A Quote</h3>
                 </div>
             </div>
             <div class="row">
