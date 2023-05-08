@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
     <link rel="stylesheet" href="assets/css/aos.min.css">
+    <link rel="stylesheet" href="assets/css/Pretty-Footer-.css">
     <link rel="stylesheet" href="assets/css/-Login-form-Page-BS4--Login-form-Page-BS4.css">
     <link rel="stylesheet" href="assets/css/Login-Form-Basic-icons.css">
     <link rel="stylesheet" href="assets/css/Ludens-basic-login.css">
@@ -25,8 +26,8 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto text-uppercase">
                     <li class="nav-item"><a class="nav-link active" href="#">HOME</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">PRODUCT</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="product.php">PRODUCT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     <li class="nav-item"><a class="nav-link" href="login.php">LOGIN</a></li>
                 </ul>
@@ -52,7 +53,8 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6 col-md-4 portfolio-item"><a class="portfolio-link" href="#portfolioModal1" data-bs-toggle="modal">
+                <!-- <div class="col-sm-6 col-md-4 portfolio-item"><a class="portfolio-link" href="#portfolioModal1" data-bs-toggle="modal">  -->
+                <div class="col-sm-4 col-md-2 portfolio-item"><a class="portfolio-link" href="#portfolioModal1" data-bs-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
                         </div><img class="img-fluid" src="assets/img/products/CYNIC.png">
@@ -62,7 +64,7 @@
                         <p class="text-muted"><span style="color: rgb(102, 102, 102);">CYNIC Series Machines have unrivalled cutting capability achieved by overwhelming Power!</span></p>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 portfolio-item"><a class="portfolio-link" href="#portfolioModal2" data-bs-toggle="modal">
+                <div class="col-sm-4 col-md-2 portfolio-item"><a class="portfolio-link" href="#portfolioModal2" data-bs-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
                         </div><img class="img-fluid" src="assets/img/products/tmc.png" width="398" height="267">
@@ -72,7 +74,7 @@
                         <p class="text-muted"><span style="color: rgb(102, 102, 102);">All MC Series Machines having unrivalled cutting capability achieved by overwhelming power!</span></p>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 portfolio-item"><a class="portfolio-link" href="#portfolioModal3" data-bs-toggle="modal">
+                <div class="col-sm-4 col-md-2 portfolio-item"><a class="portfolio-link" href="#portfolioModal3" data-bs-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
                         </div><img class="img-fluid" src="assets/img/products/hmc.png">
@@ -82,7 +84,7 @@
                         <p class="text-muted"><span style="color: rgb(102, 102, 102);">High Precision Grade Roller LM Guide ways With Medium Preloaded Extra Long Blocks.</span></p>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 portfolio-item"><a class="portfolio-link" href="#portfolioModal4" data-bs-toggle="modal">
+                <div class="col-sm-4 col-md-2 portfolio-item"><a class="portfolio-link" href="#portfolioModal4" data-bs-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
                         </div><img class="img-fluid" src="assets/img/products/CLOBBER.png">
@@ -92,7 +94,7 @@
                         <p class="text-muted"><span style="color: rgb(102, 102, 102);">The CLOBBER Series Vertical Machining Centre Delivers Massive Cutting Versatility at your Working Place.</span></p>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 portfolio-item"><a class="portfolio-link" href="#portfolioModal5" data-bs-toggle="modal">
+                <div class="col-sm-4 col-md-2 portfolio-item"><a class="portfolio-link" href="#portfolioModal5" data-bs-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
                         </div><img class="img-fluid" src="assets/img/products/vtl.png">
@@ -102,7 +104,7 @@
                         <p class="text-muted"><span style="color: rgb(102, 102, 102);">The VTL Series having Ball Screw With C3 Class, Double Nut, Long Nut And Deep Groove With Zero Backlash</span></p>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 portfolio-item"><a class="portfolio-link" href="#portfolioModal6" data-bs-toggle="modal">
+                <div class="col-sm-4 col-md-2 portfolio-item"><a class="portfolio-link" href="#portfolioModal6" data-bs-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fa fa-plus fa-3x"></i></div>
                         </div><img class="img-fluid" src="assets/img/products/DCMC.png">
@@ -112,36 +114,7 @@
                         <p class="text-muted"><span style="color: rgb(102, 102, 102);">DCMC Series having the Taiwan Make High Speed Rigid Spindle with P4 Class Angular Contact Ball Bearings</span></p>
                     </div>
                 </div>
-                <?php
-
-                    include("connection.php");
-                    $query = "SELECT * FROM prod_tab";
-                    $result = mysqli_query($con,$query);
-
-                    while($row = mysqli_fetch_assoc($result))
-                    {
-                        
-                        // echo'<div class="col-sm-6 col-md-4 portfolio-item"><a class="portfolio-link" href="'.$row['modal'].'" data-bs-toggle="modal">';
-                        echo'<div data-aos="fade-up" data-aos-duration="900" class="card aos-init aos-animate" style="width: 18rem;border-top-left-radius: 20px;border-top-right-radius: 20px;border-bottom-right-radius: 20px;border-bottom-left-radius: 20px;box-shadow: 5px 5px 16px 2px rgba(0,0,0,0.25);margin: 14px;min-width: 280px;max-width: 300px;margin-bottom: 20px;">';
-                        echo'<div>';
-                        echo'<img width="239" height="192" src="assets/img/products/'.$row['img'].'" style="padding: 8px;margin: 7px;transform-origin: center;width: 239px;height: 192px;" />';
-                        echo'<div class="card-body d-flex flex-column" style="height: 262px;">';
-                        echo'<div>';
-                        echo'<h4 style="font-family: &quot;Source Sans Pro&quot;, sans-serif;font-weight: 700;color: rgb(249 87 35);">'.$row['name'].'</h4>';
-                        echo'<p style="font-family: &quot;Source Sans Pro&quot;, sans-serif;color: #212121;margin-top: 16px;">'.$row['short'].'</p>';
-                        echo'<a class="align-self-end card-link" data-bss-hover-animate="pulse" href="'.$row['modal'].'" data-bs-toggle="modal" style="padding: 4px;background: #0e8dcb;color: rgb(255,255,255);border-radius: 17px;padding-right: 14px;padding-left: 14px;padding-bottom: 6px;font-family: &quot;Source Sans Pro&quot;, sans-serif;margin-top: auto;">Learn More</a>';
-                        echo'</div>';
-                        echo'</div>';
-                        echo'</div>';
-                        echo'</div>';
-                        // echo'</div>';
-                    }
-
-
-
-
-
-                ?>
+                <a class="btn btn-primary btn-xl text-uppercase" role="button" href="product.php" style="color: rgb(102,102,102);"><span style="color: rgb(0, 0, 0);">FIND MORE PRODUCTS</span></a>
 
             </div>
         </div>
@@ -156,26 +129,26 @@
                 </div>
             </div>
             <div class="row text-center">
-                <div class="col-md-4"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-users fa-stack-1x fa-inverse"></i></span>
-                    <h4 class="section-heading">20+ Years Experienced Team</h4>
-                    <p class="text-muted">We are privileged to have sales team which having 20+ years experience experts understand your business's production processes and provide you best solution</p>
-                </div>
-                <div class="col-md-4"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x text-primary" style="color: rgb(62,140,228);"></i><i class="fa fa-rupee fa-stack-1x fa-inverse"></i></span>
-                    <h4 class="section-heading">Reasonable Price</h4>
-                    <p class="text-muted">We take the time to understand your business's production processes, ensuring that we recommend the right machines to help you increase efficiency and reduce costs.</p>
-                </div>
-                <div class="col-md-4"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x text-primary"></i><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-package fa-stack-1x fa-inverse" style="height: 73px;width: 81px;margin: 26px;padding: 0px;">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                            <polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3"></polyline>
-                            <line x1="12" y1="12" x2="20" y2="7.5"></line>
-                            <line x1="12" y1="12" x2="12" y2="21"></line>
-                            <line x1="12" y1="12" x2="4" y2="7.5"></line>
-                            <line x1="16" y1="5.25" x2="8" y2="9.75"></line>
-                        </svg></span>
-                    <h4 class="section-heading">Fast feature Delivery</h4>
-                    <p class="text-muted">Under promise and Over Delivery is our success Mantra We Care your Production Growth and Deliver your machines on time by provide excellent after-sales service and maintenance support.</p>
-                </div>
+            <div data-aos="fade-right" data-aos-duration="900" data-aos-once="true" class="col-md-4" style><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-users fa-stack-1x fa-inverse"></i></span>
+                <h4 class="section-heading">20+ Years Experienced Team</h4>
+                <p class="text-muted">We are privileged to have sales team which having 20+ years experience experts understand your business&#39;s production processes and provide you best solution</p>
             </div>
+            <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="900" data-aos-once="true" class="col-md-4"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x text-primary" style="color: rgb(62,140,228);"></i><i class="fa fa-rupee fa-stack-1x fa-inverse"></i></span>
+                <h4 class="section-heading">Reasonable Price</h4>
+                <p class="text-muted">We take the time to understand your business&#39;s production processes, ensuring that we recommend the right machines to help you increase efficiency and reduce costs.</p>
+            </div>
+            <div data-aos="fade-left" data-aos-duration="900" data-aos-once="true" class="col-md-4"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x text-primary"></i><svg class="icon icon-tabler icon-tabler-package fa-stack-1x fa-inverse" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="height: 73px;width: 81px;margin: 26px;padding: 0px;">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3"></polyline>
+                        <line x1="12" y1="12" x2="20" y2="7.5"></line>
+                        <line x1="12" y1="12" x2="12" y2="21"></line>
+                        <line x1="12" y1="12" x2="4" y2="7.5"></line>
+                        <line x1="16" y1="5.25" x2="8" y2="9.75"></line>
+                    </svg></span>
+                <h4 class="section-heading">Fast feature Delivery</h4>
+                <p class="text-muted">Under promise and Over Delivery is our success Mantra We Care your Production Growth and Deliver your machines on time by provide excellent after-sales service and maintenance support.</p>
+            </div>
+        </div>
         </div>
     </section>
     <section id="about">
@@ -189,7 +162,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <ul class="list-group timeline">
-                        <li class="list-group-item">
+                        <li class="list-group-item" data-aos="fade-right" data-aos-duration="900" data-aos-once="true">
                             <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/20230428090358_[fpdl.in]_building-concept-illustration_114360-4469.jpg" style="width: 146px;height: 147px;margin: 4px;padding: 2px;"></div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -201,7 +174,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="list-group-item timeline-inverted">
+                        <li class="list-group-item timeline-inverted" data-aos="fade-left" data-aos-duration="900" data-aos-once="true">
                             <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/20230428090655_[fpdl.in]_green-hand-drawn-partnership-clipart_53876-115985.jpg" style="width: 146px;height: 147px;margin: 4px;padding: 2px;"></div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -213,7 +186,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="list-group-item">
+                        <li class="list-group-item" data-aos="fade-right" data-aos-duration="900" data-aos-once="true">
                             <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/Frame%201.png" style="width: 146px;height: 147px;margin: 4px;padding: 2px;"></div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -225,7 +198,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="list-group-item timeline-inverted">
+                        <li class="list-group-item timeline-inverted" data-aos="fade-left" data-aos-duration="900" data-aos-once="true">
                             <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/Group%203.png" style="width: 146px;height: 147px;margin: 4px;padding: 2px;"></div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -237,7 +210,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="list-group-item timeline-inverted">
+                        <li class="list-group-item timeline-inverted" data-aos="fade-up" data-aos-duration="900" data-aos-once="true">
                             <div class="timeline-image">
                                 <h4>Be Part<br>&nbsp;Of Our<br>&nbsp;Story!</h4>
                             </div>
@@ -247,45 +220,7 @@
             </div>
         </div>
     </section>
-    <!-- <section class="bg-light" id="team">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/img/team/1.jpg">
-                        <h4>Kay Garland</h4>
-                        <p class="text-muted">Lead Designer</p>
-                        <ul class="list-inline social-buttons">
-                            <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/img/team/2.jpg">
-                        <h4>Larry Parker</h4>
-                        <p class="text-muted">Lead Marketer</p>
-                        <ul class="list-inline social-buttons">
-                            <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="team-member"><img class="rounded-circle mx-auto" src="assets/img/team/3.jpg">
-                        <h4>Diana Pertersen</h4>
-                        <p class="text-muted">Lead Developer</p>
-                        <ul class="list-inline social-buttons">
-                            <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
+   
     <section class="py-5">
         <div class="container">
             <div class="row">
@@ -333,23 +268,29 @@
             </div>
         </div>
     </section>
+    
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4"><span class="copyright">Copyright&nbsp;© Brand 2023</span></div>
-                <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
-                        <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    </ul>
+        <div class="row">
+            <div class="col-sm-6 col-md-4 footer-navigation">
+                <h3><a href="#"><span style="color: rgb(202, 208, 219); background-color: rgb(36, 42, 54);">&nbsp;Next Tech Machines</span></a></h3>
+                <p class="links"><a href="#">Home</a><strong> · </strong><a href="#">Product</a><strong> · · </strong><a href="#">About</a><strong> · </strong><a href="#">Contact</a><strong> · </strong><a href="#">Login</a></p>
+                <p class="company-name">Company Name © 2015 </p>
+            </div>
+            <div class="col-sm-6 col-md-4 footer-contacts">
+                <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
+                    <p><span class="new-line-span"><span style="color: rgb(202, 208, 219); background-color: rgb(36, 42, 54);">Flat No. C-14</span><br><span style="color: rgb(202, 208, 219); background-color: rgb(36, 42, 54);">Sara Riddhi, Harsul,</span></span> Aurangabad</p>
                 </div>
-                <div class="col-md-4">
-                    <ul class="list-inline quicklinks">
-                        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-                        <li class="list-inline-item"><a href="#">Terms of Use</a></li>
-                    </ul>
+                <div><i class="fa fa-phone footer-contacts-icon"></i>
+                    <p class="footer-center-info email text-start"><span style="font-weight: normal !important; color: rgb(202, 208, 219); background-color: rgb(36, 42, 54);">+91 9823573380</span></p>
                 </div>
+                <div><i class="fa fa-envelope footer-contacts-icon"></i>
+                    <p> <a href="#" target="_blank"><br><span style="font-weight: normal !important; color: rgb(202, 208, 219); background-color: rgb(36, 42, 54);">info@nexttechmachine.com</span><br><br></a></p>
+                </div>
+            </div>
+            <div class="col-md-4 footer-about">
+                <h3>About Us</h3>
+                <p><br><span style="color: rgb(202, 208, 219); background-color: rgb(36, 42, 54);">We specialize in providing industrial machines for businesses of all sizes. With years of experience in the industry, we have established ourselves as a trusted provider of quality equipment that helps businesses to optimize their production processes and reduce costs.</span><br><br></p>
+                <div class="social-links social-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-github"></i></a></div>
             </div>
         </div>
     </footer>

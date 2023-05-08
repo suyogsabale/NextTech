@@ -21,7 +21,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto text-uppercase">
                     <li class="nav-item"><a class="nav-link" href="index.php">HOME</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">PRODUCT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="product.php">PRODUCT</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     <li class="nav-item"><a class="nav-link active"  href="login.php">LOGIN</a></li>
