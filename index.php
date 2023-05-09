@@ -28,8 +28,8 @@
                     <li class="nav-item"><a class="nav-link active" href="#">HOME</a></li>
                     <li class="nav-item"><a class="nav-link" href="product.php">PRODUCT</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.php">LOGIN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.php">ADMIN</a></li>
                 </ul>
             </div>
         </div>
@@ -272,9 +272,10 @@
     <footer>
         <div class="row">
             <div class="col-sm-6 col-md-4 footer-navigation">
-                <h3><a href="#"><span style="color: rgb(202, 208, 219); background-color: rgb(36, 42, 54);">&nbsp;Next Tech Machines</span></a></h3>
-                <p class="links"><a href="#">Home</a><strong> · </strong><a href="#">Product</a><strong> · · </strong><a href="#">About</a><strong> · </strong><a href="#">Contact</a><strong> · </strong><a href="#">Login</a></p>
-                <p class="company-name">Company Name © 2015 </p>
+                <!-- <h3><a href="#"><span style="color: rgb(202, 208, 219); background-color: rgb(36, 42, 54);">&nbsp;Next Tech Machines</span></a></h3> -->
+                <h3><img src="assets/img/Group%201%20(1).png" width="200" height="60"></h3>
+                <p class="links"><a href="#">Home</a><strong> · </strong><a href="product.php">Product</a><strong> · </strong><a href="about.html">About</a><strong> · </strong><a href="contact.html">Contact</a><strong> · </strong><a href="login.php">Login</a></p>
+                <p class="company-name">NextTech Machines © 2023 </p>
             </div>
             <div class="col-sm-6 col-md-4 footer-contacts">
                 <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
@@ -290,7 +291,7 @@
             <div class="col-md-4 footer-about">
                 <h3>About Us</h3>
                 <p><br><span style="color: rgb(202, 208, 219); background-color: rgb(36, 42, 54);">We specialize in providing industrial machines for businesses of all sizes. With years of experience in the industry, we have established ourselves as a trusted provider of quality equipment that helps businesses to optimize their production processes and reduce costs.</span><br><br></p>
-                <div class="social-links social-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-github"></i></a></div>
+                <div class="social-links social-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
             </div>
         </div>
     </footer>

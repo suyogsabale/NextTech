@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/icon.png">
+    <title>Next Tech Machines</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/Kaushan%20Script.css">
     <link rel="stylesheet" href="assets/css/Montserrat.css">
@@ -22,8 +23,8 @@
                 <ul class="navbar-nav ms-auto text-uppercase">
                     <li class="nav-item"><a class="nav-link" href="index.php">HOME</a></li>
                     <li class="nav-item"><a class="nav-link" href="product.php">PRODUCT</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     <li class="nav-item"><a class="nav-link active"  href="login.php">LOGIN</a></li>
                 </ul>
             </div>
@@ -49,13 +50,14 @@
                                             <form class="user" action="login.php" method="POST" autocomplete="">
                                                 <div class="mb-3"><input class="form-control form-control-user" type="email" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..." name="email"></div>
                                                 <div class="mb-3"><input class="form-control form-control-user" type="password" id="exampleInputPassword" placeholder="Password" name="password"></div>
+                                                
                                                 <div class="mb-3">
                                                     <div class="custom-control custom-checkbox small"></div>
                                                 </div><button class="btn btn-primary d-block btn-user w-100" type="submit" name="login" style="background: #fe5720;">Login</button>
                                                 <hr>
                                                 <hr>
                                             </form>
-                                            <div class="text-center"><a class="small" href="forgot-password.html" style="color: #01703E;">Forgot Password?</a></div>
+                                            <!-- <div class="text-center"><a class="small" href="forgot-password.html" style="color: #01703E;">Forgot Password?</a></div> -->
                                         </div>
                                     </div>
                                 </div>
@@ -86,6 +88,10 @@
             </div>
         </div>
     </footer>
+
+
+
+
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/agency.js"></script>

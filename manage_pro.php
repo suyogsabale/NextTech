@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/icon.png">
+    <title>Next Tech Machines</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/Arbutus%20Slab.css">
     <link rel="stylesheet" href="assets/css/Kaushan%20Script.css">
@@ -34,7 +35,7 @@
                     <li class="nav-item"></li>
                     <li class="nav-item"></li>
                     <li class="nav-item"><a class="nav-link active" href="#about">manage product</a></li>
-                    <li class="nav-item"><a class="nav-link" href="queries.html">Queries</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="queries.html">Queries</a></li> -->
                     <li class="nav-item"><a class="nav-link" href="log-out.php">LOG-OUT</a></li>
                 </ul>
             </div>

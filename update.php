@@ -47,7 +47,6 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto text-uppercase">
                     <li class="nav-item"><a class="nav-link" href="manage_pro.php">MANAGE PRODUCTS</a></li>
-                    <li class="nav-item"><a class="nav-link" href="queries.html">QUERIES</a></li>
                     <li class="nav-item"><a class="nav-link" href="log-out.php">LOG-OUT</a></li>
                 </ul>
             </div>

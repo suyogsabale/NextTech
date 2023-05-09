@@ -25,7 +25,7 @@
 
         // move_uploaded_file($img_tmp_name, $target_file);
 
-        $sql = "update prod_tab set name='$name',short='$short',class='$class',feat='$feat',pdf='$pdf',modal='$modal',modid= '$modid' WHERE id='$id'";
+        $sql = "update prod_tab set name='$name',short='$short',class='$class',feat='$feat',pdf='$pdf',modal='$modal',modid= '$modalid' WHERE id='$id'";
 
         if ($con->query($sql) === TRUE) {
             header('Location: http://localhost/NextTech/manage_pro.php');

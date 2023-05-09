@@ -28,8 +28,8 @@
                     <li class="nav-item"><a class="nav-link " href="index.php">HOME</a></li>
                     <li class="nav-item"><a class="nav-link active" href="#">PRODUCT</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.php">LOGIN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.php">Admin</a></li>
                 </ul>
             </div>
         </div>
@@ -62,7 +62,7 @@
                         echo'<div>';
                         echo'<h4 style="font-family: &quot;Source Sans Pro&quot;, sans-serif;font-weight: 700;color: rgb(249 87 35);">'.$row['name'].'</h4>';
                         echo'<p style="font-family: &quot;Source Sans Pro&quot;, sans-serif;color: #212121;margin-top: 16px;">'.$row['short'].'</p>';
-                        echo'<a class="align-self-end card-link" data-bss-hover-animate="pulse" href="'.$row['modal'].'" data-bs-toggle="modal" style="padding: 4px;background: #0e8dcb;color: rgb(255,255,255);border-radius: 17px;padding-right: 14px;padding-left: 14px;padding-bottom: 6px;font-family: &quot;Source Sans Pro&quot;, sans-serif;margin-top: auto;">Learn More</a>';
+                        echo'<a class="align-self-end card-link" data-bss-hover-animate="pulse" href="'.$row['modal'].'" data-bs-toggle="modal" style="padding: 4px;background: #0e8dcb;color: rgb(255,255,255);border-radius: 17px;padding-right: 14px;padding-left: 14px;padding-bottom: 6px;font-family: &quot;Source Sans Pro&quot;, sans-serif;margin-top: auto;">View More</a>';
                         echo'</div>';
                         echo'</div>';
                         echo'</div>';
@@ -85,7 +85,7 @@
     <footer>
         <div class="row">
             <div class="col-sm-6 col-md-4 footer-navigation">
-                <h3><a href="#"><span style="color: rgb(202, 208, 219); background-color: rgb(36, 42, 54);">&nbsp;Next Tech Machines</span></a></h3>
+            <h3><img src="assets/img/Group%201%20(1).png" width="200" height="60"></h3>
                 <p class="links"><a href="#">Home</a><strong> · </strong><a href="#">Product</a><strong> · · </strong><a href="#">About</a><strong> · </strong><a href="#">Contact</a><strong> · </strong><a href="#">Login</a></p>
                 <p class="company-name">Company Name © 2015 </p>
             </div>
