@@ -32,13 +32,7 @@
           } else {
             echo "Error: " . $sql . "<br>" . $con->error;
           }
-        // if(mysqli_query($con,$sql)){
-		// 	echo "Data inserted...";
-        //     header('Location: http://localhost/NextTech/manage_pro.php');
-		
-		// }else {
-		// 	echo "Data not inserted...!!!";
-		// }
+       
 
     
     }
