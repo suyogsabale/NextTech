@@ -49,7 +49,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="text-uppercase section-heading">PRODUCTS</h2>
-                    <h3 class="text-muted section-subheading">We Cater Your Needs...</h3>
+                    <h3 class="text-muted section-subheading">We Cater Your Needs .....</h3>
                 </div>
             </div>
             <div class="row">
